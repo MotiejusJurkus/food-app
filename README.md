@@ -6,12 +6,14 @@ You have **1 hour**. You have an API. You have AI tools at your disposal.
 
 **Build something that helps people understand what they're eating.**
 
-## Rules
+## Requirements
 
 1. Use any frontend framework (or none), as long as it works
 2. Use AI coding tools — that's the point
 3. Work solo
-4. Have fun!
+4. Clone this repo, share a link for demo **(localhost does not count!)**
+5. Submit a MR at the end
+6. Have fun!
 
 ## API
 
