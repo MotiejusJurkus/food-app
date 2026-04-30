@@ -36,7 +36,7 @@ export function IngredientCard({ ingredient }: { ingredient: Ingredient }) {
         </button>
       </div>
 
-      <div className="mt-3 grid grid-cols-4 gap-2">
+      <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
         {MACRO_KEYS.map((key) => {
           const meta = NUTRITION_FIELDS.find((f) => f.key === key);
           if (!meta) return null;

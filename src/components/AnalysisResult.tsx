@@ -43,10 +43,10 @@ export function AnalysisResult({ analysis, previewUrl, onReset }: Props) {
             />
           </div>
         )}
-        <div className="p-6 sm:p-8">
+        <div className="p-5 sm:p-8">
           <div className="flex flex-wrap items-start justify-between gap-4">
-            <div className="min-w-0 flex-1">
-              <h2 className="text-3xl font-light uppercase tracking-tighter text-[var(--text)] sm:text-4xl">
+            <div className="min-w-0 flex-1 basis-full sm:basis-auto">
+              <h2 className="text-2xl font-light uppercase leading-[1.05] tracking-tighter text-[var(--text)] sm:text-4xl sm:leading-tight">
                 {name}
               </h2>
               {description && (
@@ -79,7 +79,7 @@ export function AnalysisResult({ analysis, previewUrl, onReset }: Props) {
         </div>
       </div>
 
-      <section className="border border-[var(--line)] bg-[var(--surface)] p-6 sm:p-8">
+      <section className="border border-[var(--line)] bg-[var(--surface)] p-5 sm:p-8">
         <h3 className="mb-6 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--faint)]">
           {t(lang, 'nutritionBreakdown')}
         </h3>
@@ -87,7 +87,7 @@ export function AnalysisResult({ analysis, previewUrl, onReset }: Props) {
       </section>
 
       {analysis.ingredients.length > 0 && (
-        <section className="border border-[var(--line)] bg-[var(--surface)] p-6 sm:p-8">
+        <section className="border border-[var(--line)] bg-[var(--surface)] p-5 sm:p-8">
           <h3 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--faint)]">
             {t(lang, 'ingredients')} ({analysis.ingredients.length})
           </h3>
