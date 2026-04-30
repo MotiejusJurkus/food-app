@@ -15,6 +15,7 @@ export const UI_COPY = {
     heroTitle: "What's on your plate?",
     heroDescription:
       'Upload a photo of your meal and get an instant breakdown of calories, macros, and ingredients.',
+    foodAnalysis: 'Food analysis',
     footer: 'Chief Cooking Technologies',
     uploadInvalidType: 'Please upload a JPEG or PNG image.',
     uploadTooLarge: 'Image is larger than 10 MB.',
@@ -48,6 +49,7 @@ export const UI_COPY = {
     heroTitle: 'Kas jūsų lėkštėje?',
     heroDescription:
       'Įkelkite patiekalo nuotrauką ir iškart gaukite kalorijų, makroelementų bei ingredientų analizę.',
+    foodAnalysis: 'Maisto analizė',
     footer: 'Chief Cooking Technologies',
     uploadInvalidType: 'Įkelkite JPEG arba PNG paveikslėlį.',
     uploadTooLarge: 'Paveikslėlis didesnis nei 10 MB.',

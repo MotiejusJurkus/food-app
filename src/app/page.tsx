@@ -22,7 +22,7 @@ export default function Home() {
       <main className="mx-auto w-full max-w-6xl px-6 py-12 sm:py-16">
         <section className="mb-12 border-l border-[var(--accent)] pl-6">
           <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-[var(--faint)]">
-            CHIEF COOKING TECHNOLOGIES / FOOD ANALYSIS
+            CHIEF COOKING TECHNOLOGIES / {t(lang, 'foodAnalysis')}
           </p>
           <h1 className="max-w-3xl text-5xl font-extrabold uppercase leading-none tracking-tighter text-[var(--text)] sm:text-6xl">
             {t(lang, 'heroTitle')}
