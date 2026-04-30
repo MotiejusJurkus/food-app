@@ -17,7 +17,7 @@ export function NutriScoreBadge({ score }: { score: NutriScore | null | undefine
 
   if (!score) {
     return (
-      <span className="inline-flex items-center gap-2 rounded-full bg-neutral-200 px-3 py-1 text-xs font-medium text-neutral-600">
+      <span className="inline-flex items-center gap-2 border border-[var(--line)] bg-[var(--surface-muted)] px-3 py-1 font-mono text-xs font-medium uppercase tracking-[0.14em] text-[var(--muted)]">
         {t(lang, 'nutriScoreUnavailable')}
       </span>
     );
@@ -26,16 +26,16 @@ export function NutriScoreBadge({ score }: { score: NutriScore | null | undefine
   return (
     <div className="inline-flex items-center gap-3">
       <span
-        className={`inline-flex h-10 w-10 items-center justify-center rounded-full text-lg font-bold text-white shadow-sm ${SCORE_STYLES[score]}`}
+        className={`inline-flex h-10 w-10 items-center justify-center font-mono text-lg font-bold text-white ${SCORE_STYLES[score]}`}
         aria-label={`Nutri-Score ${score}`}
       >
         {score}
       </span>
       <div className="leading-tight">
-        <p className="text-xs font-medium uppercase tracking-wide text-neutral-500">
+        <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-[var(--faint)]">
           {t(lang, 'nutriScore')}
         </p>
-        <p className="text-sm text-neutral-700">{nutriScoreLabel(lang, score)}</p>
+        <p className="text-sm text-[var(--muted)]">{nutriScoreLabel(lang, score)}</p>
       </div>
     </div>
   );

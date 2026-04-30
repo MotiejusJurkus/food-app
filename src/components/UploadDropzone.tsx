@@ -68,22 +68,22 @@ export function UploadDropzone() {
 
   if (mutation.isPending) {
     return (
-      <div className="rounded-2xl bg-white p-10 text-center shadow-sm ring-1 ring-neutral-200">
+      <div className="border border-[var(--line)] bg-[var(--surface)] p-8 text-center">
         {previewUrl && (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
             src={previewUrl}
             alt={t(lang, 'uploadAlt')}
-            className="mx-auto mb-6 h-48 w-full max-w-sm rounded-xl object-cover"
+            className="mx-auto mb-6 h-56 w-full max-w-xl border border-[var(--line)] object-cover grayscale"
           />
         )}
         <div className="flex items-center justify-center gap-3">
-          <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-neutral-300 border-t-neutral-900" />
-          <p className="text-sm font-medium text-neutral-700">
+          <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-[var(--line)] border-t-[var(--accent)]" />
+          <p className="font-mono text-sm font-medium uppercase tracking-[0.16em] text-[var(--text)]">
             {t(lang, 'uploadPending')}
           </p>
         </div>
-        <p className="mt-2 text-xs text-neutral-500">
+        <p className="mt-3 text-sm text-[var(--muted)]">
           {t(lang, 'uploadPendingHint')}
         </p>
       </div>
@@ -110,22 +110,22 @@ export function UploadDropzone() {
           setDragOver(false);
           handleFile(e.dataTransfer.files?.[0]);
         }}
-        className={`flex w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed bg-white p-10 text-center transition sm:p-16 ${
+        className={`group flex w-full flex-col items-center justify-center border border-dashed bg-[var(--surface)] p-10 text-center transition sm:p-16 ${
           dragOver
-            ? 'border-emerald-500 bg-emerald-50'
-            : 'border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50'
+            ? 'border-[var(--accent)] bg-[var(--accent-soft)]'
+            : 'border-[var(--line)] hover:border-[var(--accent)] hover:bg-[var(--accent-soft)]'
         }`}
       >
         <span
           aria-hidden
-          className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-neutral-100 text-2xl"
+          className="mb-5 inline-flex h-14 w-14 items-center justify-center border border-[var(--line)] bg-[var(--surface-muted)] text-2xl transition-colors group-hover:border-[var(--accent)]"
         >
           <UploadIcon />
         </span>
-        <p className="text-base font-semibold text-neutral-900">
+        <p className="font-mono text-sm font-semibold uppercase tracking-[0.2em] text-[var(--text)]">
           {t(lang, 'uploadTitle')}
         </p>
-        <p className="mt-1 text-sm text-neutral-500">
+        <p className="mt-3 text-sm text-[var(--muted)]">
           {t(lang, 'uploadHint')}
         </p>
       </button>
@@ -141,14 +141,14 @@ export function UploadDropzone() {
       {(validationError || apiError) && (
         <div
           role="alert"
-          className="flex items-start justify-between gap-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800"
+          className="flex items-start justify-between gap-3 border border-red-400/50 bg-red-500/10 px-4 py-3 text-sm text-[var(--text)]"
         >
           <p>{validationError ?? apiError}</p>
           {apiError && (
             <button
               type="button"
               onClick={reset}
-              className="shrink-0 font-medium underline hover:no-underline"
+              className="shrink-0 font-mono text-xs font-medium uppercase tracking-[0.16em] text-[var(--accent-text)] underline hover:no-underline"
             >
               {t(lang, 'tryAgain')}
             </button>
@@ -182,7 +182,7 @@ function UploadIcon() {
       strokeWidth={1.8}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-6 w-6 text-neutral-600"
+      className="h-6 w-6 text-[var(--muted)]"
     >
       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
       <polyline points="17 8 12 3 7 8" />

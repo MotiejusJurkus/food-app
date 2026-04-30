@@ -16,7 +16,7 @@ export function LanguageToggle() {
     <div
       role="radiogroup"
       aria-label={t(lang, 'languageToggleLabel')}
-      className="inline-flex rounded-full border border-neutral-200 bg-white p-1 text-sm shadow-sm"
+      className="inline-flex border border-[var(--line)] bg-[var(--surface)] p-1 font-mono text-xs uppercase tracking-[0.16em]"
     >
       {OPTIONS.map((option) => {
         const active = lang === option.value;
@@ -27,10 +27,10 @@ export function LanguageToggle() {
             role="radio"
             aria-checked={active}
             onClick={() => setLang(option.value)}
-            className={`rounded-full px-3 py-1 font-medium transition ${
+            className={`px-3 py-1 font-medium transition ${
               active
-                ? 'bg-neutral-900 text-white'
-                : 'text-neutral-600 hover:text-neutral-900'
+                ? 'bg-[var(--accent)] text-[var(--inverse-text)]'
+                : 'text-[var(--muted)] hover:text-[var(--accent-text)]'
             }`}
           >
             {option.label}

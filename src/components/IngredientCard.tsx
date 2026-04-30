@@ -15,12 +15,14 @@ export function IngredientCard({ ingredient }: { ingredient: Ingredient }) {
   const name = pickTranslated(lang, ingredient.name, ingredient.name_translated);
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white p-4 transition hover:shadow-sm">
+    <div className="border border-[var(--line)] bg-[var(--surface-strong)] p-4 transition-colors hover:border-[var(--accent)] hover:bg-[var(--accent-soft)]">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h4 className="font-medium text-neutral-900">{name}</h4>
+          <h4 className="font-mono text-sm font-medium uppercase tracking-[0.12em] text-[var(--text)]">
+            {name}
+          </h4>
           {ingredient.serving_size != null && (
-            <p className="text-xs text-neutral-500">
+            <p className="mt-1 text-xs text-[var(--muted)]">
               {ingredient.serving_size} {ingredient.unit ?? 'g'}
             </p>
           )}
@@ -28,7 +30,7 @@ export function IngredientCard({ ingredient }: { ingredient: Ingredient }) {
         <button
           type="button"
           onClick={() => setExpanded((v) => !v)}
-          className="shrink-0 rounded-full border border-neutral-200 px-3 py-1 text-xs font-medium text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50"
+          className="shrink-0 border border-[var(--line)] px-3 py-1 font-mono text-xs font-medium uppercase tracking-[0.14em] text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--accent-text)]"
         >
           {expanded ? t(lang, 'hide') : t(lang, 'details')}
         </button>
@@ -42,12 +44,12 @@ export function IngredientCard({ ingredient }: { ingredient: Ingredient }) {
           return (
             <div
               key={key}
-              className="rounded-lg bg-neutral-50 px-2 py-2 text-center"
+              className="border border-[var(--line)] bg-[var(--surface-muted)] px-2 py-2 text-center"
             >
-              <p className="text-[10px] font-medium uppercase tracking-wide text-neutral-500">
+              <p className="font-mono text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--faint)]">
                 {nutritionFieldLabel(lang, meta.key)}
               </p>
-              <p className="mt-0.5 text-sm font-semibold tabular-nums text-neutral-900">
+              <p className="mt-1 font-mono text-sm font-semibold tabular-nums text-[var(--text)]">
                 {formatValue(value, meta.unit)}
               </p>
             </div>
@@ -56,7 +58,7 @@ export function IngredientCard({ ingredient }: { ingredient: Ingredient }) {
       </div>
 
       {expanded && (
-        <dl className="mt-4 grid grid-cols-1 gap-x-6 gap-y-1 border-t border-neutral-100 pt-3 sm:grid-cols-2">
+        <dl className="mt-4 grid grid-cols-1 gap-x-6 gap-y-1 border-t border-[var(--line)] pt-3 sm:grid-cols-2">
           {NUTRITION_FIELDS.map((field) => {
             const value = ingredient.nutritional_fields[field.key] as
               | number
@@ -67,10 +69,10 @@ export function IngredientCard({ ingredient }: { ingredient: Ingredient }) {
                 key={field.key}
                 className="flex items-baseline justify-between text-xs"
               >
-                <dt className="text-neutral-500">
+                <dt className="text-[var(--muted)]">
                   {nutritionFieldLabel(lang, field.key)}
                 </dt>
-                <dd className="font-medium tabular-nums text-neutral-800">
+                <dd className="font-mono font-medium tabular-nums text-[var(--text)]">
                   {formatValue(value, field.unit)}
                 </dd>
               </div>

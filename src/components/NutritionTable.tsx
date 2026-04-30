@@ -27,7 +27,7 @@ export function NutritionTable({ fields }: Props) {
     <div className="space-y-6">
       {(Object.keys(grouped) as NutritionFieldGroup[]).map((group) => (
         <section key={group}>
-          <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
+          <h3 className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--faint)]">
             {nutritionGroupLabel(lang, group)}
           </h3>
           <dl className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
@@ -36,12 +36,12 @@ export function NutritionTable({ fields }: Props) {
               return (
                 <div
                   key={field.key}
-                  className="flex items-baseline justify-between border-b border-neutral-100 py-1.5"
+                  className="flex items-baseline justify-between border-b border-[var(--line)] py-1.5"
                 >
-                  <dt className="text-sm text-neutral-600">
+                  <dt className="text-sm text-[var(--muted)]">
                     {nutritionFieldLabel(lang, field.key)}
                   </dt>
-                  <dd className="text-sm font-medium tabular-nums text-neutral-900">
+                  <dd className="font-mono text-sm font-medium tabular-nums text-[var(--text)]">
                     {formatValue(value, field.unit)}
                   </dd>
                 </div>

@@ -5,14 +5,17 @@ import type { NutritionFieldGroup, NutritionFieldKey } from '@/lib/nutrition';
 export const UI_COPY = {
   en: {
     headerTagline: 'Understand what you eat',
-    metadataTitle: 'AUROLI - understand what you eat',
+    metadataTitle: 'Chief Cooking Technologies - understand what you eat',
     metadataDescription:
-      'AUROLI helps you upload a meal photo and get an instant nutrition breakdown with ingredients, macros, and Nutri-Score.',
+      'Chief Cooking Technologies helps you upload a meal photo and get an instant nutrition breakdown with ingredients, macros, and Nutri-Score.',
     languageToggleLabel: 'Language',
+    themeToggleLabel: 'Toggle color mode',
+    lightMode: 'Switch to light mode',
+    darkMode: 'Switch to dark mode',
     heroTitle: "What's on your plate?",
     heroDescription:
       'Upload a photo of your meal and get an instant breakdown of calories, macros, and ingredients.',
-    footer: 'AUROLI',
+    footer: 'Chief Cooking Technologies',
     uploadInvalidType: 'Please upload a JPEG or PNG image.',
     uploadTooLarge: 'Image is larger than 10 MB.',
     uploadAlt: 'Uploading',
@@ -35,14 +38,17 @@ export const UI_COPY = {
   },
   lt: {
     headerTagline: 'Supraskite, ką valgote',
-    metadataTitle: 'AUROLI - supraskite, ką valgote',
+    metadataTitle: 'Chief Cooking Technologies - supraskite, ką valgote',
     metadataDescription:
-      'AUROLI padeda įkelti patiekalo nuotrauką ir iškart gauti ingredientų, makroelementų bei Nutri-Score analizę.',
+      'Chief Cooking Technologies padeda įkelti patiekalo nuotrauką ir iškart gauti ingredientų, makroelementų bei Nutri-Score analizę.',
     languageToggleLabel: 'Kalba',
+    themeToggleLabel: 'Keisti spalvų režimą',
+    lightMode: 'Įjungti šviesų režimą',
+    darkMode: 'Įjungti tamsų režimą',
     heroTitle: 'Kas jūsų lėkštėje?',
     heroDescription:
       'Įkelkite patiekalo nuotrauką ir iškart gaukite kalorijų, makroelementų bei ingredientų analizę.',
-    footer: 'AUROLI',
+    footer: 'Chief Cooking Technologies',
     uploadInvalidType: 'Įkelkite JPEG arba PNG paveikslėlį.',
     uploadTooLarge: 'Paveikslėlis didesnis nei 10 MB.',
     uploadAlt: 'Įkeliama',
