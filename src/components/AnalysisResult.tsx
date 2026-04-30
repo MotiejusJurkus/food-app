@@ -39,7 +39,7 @@ export function AnalysisResult({ analysis, previewUrl, onReset }: Props) {
             <img
               src={heroImage}
               alt={name}
-              className="h-full w-full object-cover grayscale"
+              className="h-full w-full object-cover"
             />
           </div>
         )}

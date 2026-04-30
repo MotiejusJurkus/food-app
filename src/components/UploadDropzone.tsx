@@ -74,7 +74,7 @@ export function UploadDropzone() {
           <img
             src={previewUrl}
             alt={t(lang, 'uploadAlt')}
-            className="mx-auto mb-6 h-56 w-full max-w-xl border border-[var(--line)] object-cover grayscale"
+            className="mx-auto mb-6 h-56 w-full max-w-xl border border-[var(--line)] object-cover"
           />
         )}
         <div className="flex items-center justify-center gap-3">
