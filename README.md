@@ -17,11 +17,23 @@ You have **1 hour**. You have an API. You have AI tools at your disposal.
 
 ## API
 
-**Base URL:** `Will be provided at the start of the session`
+**Base URL:** `Will be provided at the start of the session in front-end_squad slack channel`
 
-**Endpoint:** `POST /api/nutrition/analyze/`
+Before proceeding, perform a quick test:
+```zsh
+curl {baseUrl}/api/ping
+```
+you should get "pong" as a response. if not, reach out!
 
-Accepts a `multipart/form-data` request with an `image` field (JPEG or PNG) and returns:
+**Nutrition analysis Endpoint:** `POST /api/nutrition/analyze/`
+
+Example:
+```zsh
+curl -X POST http://localhost:8000/api/nutrition/analyze/ -F "image=@/path/to/food.png"
+```
+
+Accepts a `multipart/form-data` request with an `image` field (JPEG or PNG) and returns the following:
+
 
 **Example input image:**
 
